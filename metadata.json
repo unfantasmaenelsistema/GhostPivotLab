@@ -1,6 +1,6 @@
 {
-  "name": "eJPTv2 Pivoting Lab",
-  "description": "Simulador interactivo de pivoting y port forwarding para el examen eJPTv2 con terminal multi-pestaña y topología de red dinámica.",
+  "name": "Ghost Pivot Lab",
+  "description": "Simulador interactivo de pivoting y port forwarding con terminal multi-pestaña y topología de red dinámica.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

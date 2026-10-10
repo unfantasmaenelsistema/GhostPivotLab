@@ -26,18 +26,18 @@ import { Shield, Sparkles, AlertTriangle, Layers } from 'lucide-react';
 
 export default function App() {
   const [activeScenarioId, setActiveScenarioId] = useState<ScenarioId>(() => {
-    const saved = localStorage.getItem('ejpt_active_scenario');
+    const saved = localStorage.getItem('ghost_pivot_active_scenario');
     return (saved as ScenarioId) || 'windows-portproxy-zorin';
   });
 
   const [learningMode, setLearningMode] = useState<LearningMode>(() => {
-    const saved = localStorage.getItem('ejpt_learning_mode');
+    const saved = localStorage.getItem('ghost_pivot_learning_mode');
     return (saved as LearningMode) || 'guided';
   });
 
   const [completedStepsMap, setCompletedStepsMap] = useState<Record<string, string[]>>(() => {
     try {
-      const saved = localStorage.getItem('ejpt_completed_steps');
+      const saved = localStorage.getItem('ghost_pivot_completed_steps');
       return saved ? JSON.parse(saved) : {};
     } catch {
       return {};
@@ -53,7 +53,7 @@ export default function App() {
   // Real-time Event Log for actions like session opened, route added, port forwarded, etc.
   const [events, setEvents] = useState<PivotingEvent[]>(() => {
     try {
-      const saved = localStorage.getItem(`ejpt_events_${activeScenarioId}`);
+      const saved = localStorage.getItem(`ghost_pivot_events_${activeScenarioId}`);
       if (saved) return JSON.parse(saved);
     } catch {}
     const sc = SCENARIOS.find((s) => s.id === activeScenarioId) || SCENARIOS[0];
@@ -77,7 +77,7 @@ export default function App() {
   // Sync events to local storage
   useEffect(() => {
     try {
-      localStorage.setItem(`ejpt_events_${activeScenarioId}`, JSON.stringify(events.slice(0, 50)));
+      localStorage.setItem(`ghost_pivot_events_${activeScenarioId}`, JSON.stringify(events.slice(0, 50)));
     } catch {}
   }, [events, activeScenarioId]);
 
@@ -111,15 +111,15 @@ export default function App() {
 
   // Sync to local storage
   useEffect(() => {
-    localStorage.setItem('ejpt_active_scenario', activeScenarioId);
+    localStorage.setItem('ghost_pivot_active_scenario', activeScenarioId);
   }, [activeScenarioId]);
 
   useEffect(() => {
-    localStorage.setItem('ejpt_learning_mode', learningMode);
+    localStorage.setItem('ghost_pivot_learning_mode', learningMode);
   }, [learningMode]);
 
   useEffect(() => {
-    localStorage.setItem('ejpt_completed_steps', JSON.stringify(completedStepsMap));
+    localStorage.setItem('ghost_pivot_completed_steps', JSON.stringify(completedStepsMap));
   }, [completedStepsMap]);
 
   // Handle switching scenarios
@@ -133,7 +133,7 @@ export default function App() {
     setCompromisedMachineIds([]);
 
     try {
-      const saved = localStorage.getItem(`ejpt_events_${id}`);
+      const saved = localStorage.getItem(`ghost_pivot_events_${id}`);
       if (saved) {
         setEvents(JSON.parse(saved));
       } else {
@@ -278,7 +278,7 @@ export default function App() {
       },
     ]);
     try {
-      localStorage.removeItem(`ejpt_events_${activeScenarioId}`);
+      localStorage.removeItem(`ghost_pivot_events_${activeScenarioId}`);
     } catch {}
   };
 
@@ -291,11 +291,11 @@ export default function App() {
       setDiscoveredHosts([]);
       setCompromisedMachineIds([]);
       setEvents([]);
-      localStorage.removeItem('ejpt_completed_steps');
-      localStorage.removeItem('ejpt_terminal_persistent_history');
+      localStorage.removeItem('ghost_pivot_completed_steps');
+      localStorage.removeItem('ghost_pivot_terminal_persistent_history');
       SCENARIOS.forEach((s) => {
         try {
-          localStorage.removeItem(`ejpt_events_${s.id}`);
+          localStorage.removeItem(`ghost_pivot_events_${s.id}`);
         } catch {}
       });
       window.location.reload();
@@ -470,7 +470,7 @@ export default function App() {
               https://www.unfantasmaenelsistema.com/
             </a>
             <span className="text-slate-600">·</span>
-            <span>Simulador de Examen eJPTv2 (Pivoting)</span>
+            <span>Simulador de Pivoting y Port Forwarding</span>
           </div>
         </div>
       </footer>

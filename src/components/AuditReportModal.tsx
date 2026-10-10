@@ -49,7 +49,7 @@ export const AuditReportModal: React.FC<AuditReportModalProps> = ({
   };
 
   const generateMarkdownReport = () => {
-    return `# INFORME DE AUDITORÍA PRÁCTICA - eJPTv2 PIVOTING LAB
+    return `# INFORME DE AUDITORÍA PRÁCTICA - GHOST PIVOT LAB
 Emitido por: Un Fantasma en el Sistema (https://www.unfantasmaenelsistema.com/)
 Fecha de Evaluación: ${new Date().toLocaleString()}
 
@@ -82,12 +82,12 @@ ${scenario.steps
     (s) =>
       `- [${completedStepIds.includes(s.id) ? 'X' : ' '}] Paso ${s.stepNumber}: ${s.title} (${
         completedStepIds.includes(s.id) ? 'SUPERADO' : 'PENDIENTE'
-      })\n  Relevancia eJPTv2: ${s.whyInExam}`
+      })\n  Relevancia práctica: ${s.whyInExam}`
   )
   .join('\n')}
 
 ============================================================
-RECOMENDACIONES PARA EL EXAMEN OFICIAL eJPTv2
+RECOMENDACIONES PARA EXÁMENES PRÁCTICOS DE PENTESTING
 ============================================================
 - Recuerda siempre documentar las dos tarjetas de red de cada host comprometido (ifconfig / ipconfig).
 - No olvides enviar las sesiones a segundo plano ('background') antes de gestionar rutas estáticas con 'route add'.
@@ -107,7 +107,7 @@ RECOMENDACIONES PARA EL EXAMEN OFICIAL eJPTv2
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `reporte_ejptv2_${scenario.id}.md`;
+    link.download = `reporte_ghost_pivot_lab_${scenario.id}.md`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -123,7 +123,7 @@ RECOMENDACIONES PARA EL EXAMEN OFICIAL eJPTv2
             </div>
             <div>
               <h2 className="text-base font-semibold text-slate-100">
-                Informe de Auditoría y Certificación eJPTv2
+                Informe de Auditoría — Ghost Pivot Lab
               </h2>
               <span className="text-[11px] text-slate-400 font-mono">
                 Evaluación de Técnicas de Pivoting & Port Forwarding
@@ -160,7 +160,7 @@ RECOMENDACIONES PARA EL EXAMEN OFICIAL eJPTv2
               </div>
               <div>
                 <h3 className="text-base font-bold text-slate-100">
-                  {isPassed ? '¡CERTIFICACIÓN eJPTv2 VALIDADA!' : 'EVALUACIÓN EN PROCESO'}
+                  {isPassed ? '¡LABORATORIO SUPERADO!' : 'EVALUACIÓN EN PROCESO'}
                 </h3>
                 <p className="text-xs text-slate-300 mt-0.5">
                   {isPassed

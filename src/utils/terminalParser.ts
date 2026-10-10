@@ -94,7 +94,7 @@ export function parseAndExecuteCommand(
   if (mainCommand === 'history') {
     if (tokens[1] === '-c') {
       try {
-        localStorage.removeItem('ejpt_terminal_persistent_history');
+        localStorage.removeItem('ghost_pivot_terminal_persistent_history');
       } catch {}
       return {
         updatedTab: {
@@ -119,7 +119,7 @@ export function parseAndExecuteCommand(
             nextTab.history
               .map((cmd, i) => `  ${(i + 1).toString().padStart(4, ' ')}  ${cmd}`)
               .join('\n') +
-            '\n\n[Tips eJPTv2: Usa ↑ y ↓ para navegar el historial o "history -c" para vaciarlo]'
+            '\n\n[Tip: Usa ↑ y ↓ para navegar el historial o "history -c" para vaciarlo]'
         )
       );
     }
@@ -210,7 +210,7 @@ export function parseAndExecuteCommand(
             `   .xOOOOOOOOOOOOOOOk.      Metasploit Framework v6.3.28-dev\n` +
             `  .xOOOOOOOOOOOOOOOOOO.     =[ 2341 exploits - 1215 auxiliary ]\n` +
             `  dOOOOOOOOOOOOOOOOOOO.     =[ 412 post - 985 payloads ]\n` +
-            `  :OOOOOOOOOOOOOOOOOOd      =[ Free eJPTv2 Pivoting Module ]\n` +
+            `  :OOOOOOOOOOOOOOOOOOd      =[ Free Ghost Pivot Module ]\n` +
             `   .xOOOOOOOOOOOOOOOO.\n` +
             `     .:kOOOOOOOOOOd.\n` +
             `\n`
@@ -265,7 +265,7 @@ export function parseAndExecuteCommand(
                 'usuario_zorin@zorin-target:~$ id\n' +
                 'uid=1000(usuario_zorin) gid=1000(usuario_zorin) groups=1000(usuario_zorin),27(sudo)'
             ),
-            createLine('success', 'FLAG{eJPTv2_PORTPROXY_TUNNEL_SUCCESS_ZORIN_PWNED}')
+            createLine('success', 'FLAG{GHOST_PIVOT_PORTPROXY_TUNNEL_SUCCESS_ZORIN_PWNED}')
           );
           if (currentStep && currentStep.id === 'step-7-ssh') {
             stepCompletedId = currentStep.id;
@@ -334,7 +334,7 @@ export function parseAndExecuteCommand(
           createLine('info', `Starting Nmap 7.94 ( https://nmap.org ) at ${new Date().toLocaleTimeString()}`),
           createLine('error', `Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn`),
           createLine('error', `Nmap done: 1 IP address (0 hosts up) scanned in 2.05 seconds`),
-          createLine('warning', `[!] Diagnóstico eJPTv2: Kali no puede alcanzar directamente la subred 10.10.10.0/24 sin pivoting o port forwarding.`)
+          createLine('warning', `[!] Diagnóstico: Kali no puede alcanzar directamente la subred 10.10.10.0/24 sin pivoting o port forwarding.`)
         );
       } else {
         lines.push(
@@ -387,17 +387,17 @@ export function parseAndExecuteCommand(
     } else if (mainCommand === 'ipconfig') {
       lines.push(
         createLine('error', `[-] ipconfig: command not found`),
-        createLine('warning', `[!] Error típico eJPTv2: 'ipconfig' es un comando de Windows o Meterpreter. En Kali Linux (Bash) debes usar 'ifconfig' o 'ip a'.`)
+        createLine('warning', `[!] Error típico: 'ipconfig' es un comando de Windows o Meterpreter. En Kali Linux (Bash) debes usar 'ifconfig' o 'ip a'.`)
       );
     } else if (mainCommand === 'use' || mainCommand === 'exploit') {
       lines.push(
         createLine('error', `[-] bash: ${mainCommand}: command not found`),
-        createLine('warning', `[!] Error típico eJPTv2: Los módulos de Metasploit se cargan dentro de msfconsole. Ejecuta primero 'msfconsole' o abre una pestaña con Metasploit.`)
+        createLine('warning', `[!] Error típico: Los módulos de Metasploit se cargan dentro de msfconsole. Ejecuta primero 'msfconsole' o abre una pestaña con Metasploit.`)
       );
     } else if (mainCommand === 'portfwd') {
       lines.push(
         createLine('error', `[-] bash: portfwd: command not found`),
-        createLine('warning', `[!] Error típico eJPTv2: 'portfwd' es un comando nativo que solo existe dentro de una sesión activa de Meterpreter.`)
+        createLine('warning', `[!] Error típico: 'portfwd' es un comando nativo que solo existe dentro de una sesión activa de Meterpreter.`)
       );
     } else {
       lines.push(createLine('error', `bash: ${mainCommand}: command not found. Escribe 'help' o 'nmap -h' para ver los comandos del laboratorio.`));
@@ -731,7 +731,7 @@ export function parseAndExecuteCommand(
         if (lport === '4444') {
           lines.push(
             createLine('error', `[-] Handler failed to bind to ${KALI_IP}:4444 (Address already in use by Session 1)`),
-            createLine('warning', `[!] REGLA CRUCIAL eJPTv2: Debes cambiar LPORT (ej. set LPORT 5555) para evitar conflicto con la primera sesión.`)
+            createLine('warning', `[!] REGLA CRUCIAL: Debes cambiar LPORT (ej. set LPORT 5555) para evitar conflicto con la primera sesión.`)
           );
         } else {
           lines.push(
@@ -741,7 +741,7 @@ export function parseAndExecuteCommand(
             createLine('success', `[+] WIN! Remote target 10.10.10.11 successfully exploited through intermediate host!`),
             createLine('info', `[*] Started reverse TCP handler on ${KALI_IP}:${lport}`),
             createLine('success', `[+] Meterpreter session 2 opened (${KALI_IP}:${lport} -> 10.10.10.11:49204) at ${new Date().toLocaleTimeString()}`),
-            createLine('success', `FLAG{eJPTv2_ETERNALBLUE_DOUBLE_PIVOT_EXPLOIT_SUCCESS}`)
+            createLine('success', `FLAG{GHOST_PIVOT_ETERNALBLUE_DOUBLE_PIVOT_EXPLOIT_SUCCESS}`)
           );
           nextTab.context = 'meterpreter';
           nextTab.activeSessionId = 2;
@@ -787,7 +787,7 @@ export function parseAndExecuteCommand(
       lines.push(
         createLine(
           'info',
-          'Comandos esenciales de Meterpreter para eJPTv2:\n' +
+          'Comandos esenciales de Meterpreter:\n' +
             '  ipconfig / ifconfig            Listar interfaces y direcciones IP de la víctima\n' +
             '  sysinfo                        Información del sistema operativo y arquitectura\n' +
             '  background / bg / Ctrl+Z       Enviar sesión a segundo plano para usar msfconsole\n' +
@@ -931,12 +931,12 @@ export function parseAndExecuteCommand(
     } else if (mainCommand === 'route') {
       lines.push(
         createLine('error', `[-] Unknown Meterpreter command: route`),
-        createLine('warning', `[!] Error típico eJPTv2: 'route add' se ejecuta en msfconsole, NO dentro de Meterpreter. Envía la sesión a segundo plano escribiendo 'background' o pulsando Ctrl+Z.`)
+        createLine('warning', `[!] Error típico: 'route add' se ejecuta en msfconsole, NO dentro de Meterpreter. Envía la sesión a segundo plano escribiendo 'background' o pulsando Ctrl+Z.`)
       );
     } else if (mainCommand === 'use' || mainCommand === 'exploit') {
       lines.push(
         createLine('error', `[-] Unknown Meterpreter command: ${mainCommand}`),
-        createLine('warning', `[!] Error típico eJPTv2: Los módulos de Metasploit se cargan en msfconsole. Escribe 'background' para volver a msfconsole.`)
+        createLine('warning', `[!] Error típico: Los módulos de Metasploit se cargan en msfconsole. Escribe 'background' para volver a msfconsole.`)
       );
     } else if (mainCommand === 'nmap') {
       lines.push(

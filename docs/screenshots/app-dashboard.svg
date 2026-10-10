@@ -26,8 +26,8 @@
     <circle cx="14" cy="17" r="1.2" fill="#0369a1"/>
     <circle cx="18" cy="17" r="1.2" fill="#0369a1"/>
 
-    <text x="44" y="16" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">eJPTv2 Pivoting Lab</text>
-    <text x="44" y="28" font-family="'JetBrains Mono', monospace" font-size="10" fill="#38bdf8">INE Security Certification Simulator</text>
+    <text x="44" y="16" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Ghost Pivot Lab</text>
+    <text x="44" y="28" font-family="'JetBrains Mono', monospace" font-size="10" fill="#38bdf8">Pivoting & Port Forwarding Simulator</text>
   </g>
 
   <!-- External Link Badge (Un Fantasma en el Sistema) -->
@@ -130,7 +130,7 @@
     <!-- Exam Tips Section -->
     <g transform="translate(18, 510)">
       <rect width="284" height="160" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
-      <text x="14" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">💡 Tips para el Examen eJPTv2:</text>
+      <text x="14" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">💡 Tips de Pivoting:</text>
       <text x="14" y="44" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">• Siempre verifica tarjetas de red con ipconfig / ifconfig</text>
       <text x="14" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">• Si usas SOCKS4a/5, edita /etc/proxychains4.conf</text>
       <text x="14" y="84" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">• Para escaneo nmap mediante proxychains usa -sT -Pn</text>
@@ -348,6 +348,6 @@
   <g transform="translate(0, 810)">
     <rect width="1280" height="30" fill="#030712" stroke="#1e293b" stroke-width="1"/>
     <text x="24" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Creado para la comunidad por <tspan font-weight="700" fill="#38bdf8">Un Fantasma En El Sistema</tspan> (https://www.unfantasmaenelsistema.com/)</text>
-    <text x="1080" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">eJPTv2 Lab v1.0.0 | Offline Ready</text>
+    <text x="1080" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">Ghost Pivot Lab v1.0.0 | Offline Ready</text>
   </g>
 </svg>

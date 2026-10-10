@@ -1,4 +1,4 @@
-# Guía de Contribución al eJPTv2 Pivoting Lab
+# Guía de Contribución a Ghost Pivot Lab
 
 ¡Gracias por tu interés en colaborar con este proyecto de la comunidad de **Un Fantasma En El Sistema**!
 
@@ -6,8 +6,8 @@
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/<tu-usuario>/ejptv2-pivoting-lab.git
-   cd ejptv2-pivoting-lab
+   git clone https://github.com/unfantasmaenelsistema/GhostPivotLab.git
+   cd GhostPivotLab
    ```
 
 2. Instala dependencias:

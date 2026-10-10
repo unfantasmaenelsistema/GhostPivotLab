@@ -39,7 +39,7 @@ interface TerminalHubProps {
   onTargetCompromised: (machineId: string) => void;
 }
 
-const PERSISTED_HISTORY_KEY = 'ejpt_terminal_persistent_history';
+const PERSISTED_HISTORY_KEY = 'ghost_pivot_terminal_persistent_history';
 
 function getPersistedHistory(): string[] {
   try {
@@ -84,7 +84,7 @@ export const TerminalHub: React.FC<TerminalHubProps> = ({
         {
           id: 'init-1',
           type: 'info',
-          text: `[+] Kali Linux 2026.1 (x86_64) - Entorno de Laboratorio eJPTv2 iniciado.\n[*] Red Puente: 192.168.1.100/24. Subred aislada: ${scenario.isolatedSubnet}.\n[*] Desarrollado por Un Fantasma en el Sistema (https://www.unfantasmaenelsistema.com/)\n[*] Escribe 'help', 'history' o consulta los objetivos del panel lateral para comenzar.`,
+          text: `[+] Kali Linux 2026.1 (x86_64) - Entorno de Ghost Pivot Lab iniciado.\n[*] Red Puente: 192.168.1.100/24. Subred aislada: ${scenario.isolatedSubnet}.\n[*] Desarrollado por Un Fantasma en el Sistema (https://www.unfantasmaenelsistema.com/)\n[*] Escribe 'help', 'history' o consulta los objetivos del panel lateral para comenzar.`,
           timestamp: Date.now(),
         },
       ],

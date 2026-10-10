@@ -59,7 +59,7 @@ export const CheatsheetModal: React.FC<CheatsheetModalProps> = ({ isOpen, onClos
             </a>
             <div>
               <h2 className="text-base font-semibold text-slate-100">
-                Manual de Pivoting & Guía de Laboratorio eJPTv2
+                Manual de Pivoting & Guía de Laboratorio
               </h2>
               <a
                 href="https://www.unfantasmaenelsistema.com/"
@@ -123,7 +123,7 @@ export const CheatsheetModal: React.FC<CheatsheetModalProps> = ({ isOpen, onClos
           {activeTab === 'commands' && (
             <div className="space-y-4">
               <p className="text-slate-300">
-                Resumen de sintaxis de las tres técnicas fundamentales evaluadas en el examen eJPTv2:
+                Resumen de sintaxis de las tres técnicas fundamentales evaluadas en un examen práctico de pentesting:
               </p>
 
               <div className="space-y-3">

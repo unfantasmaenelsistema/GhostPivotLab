@@ -69,7 +69,7 @@ export const ScenarioGuide: React.FC<ScenarioGuideProps> = ({
         <div className="flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-sky-400" />
           <h2 className="text-sm font-semibold tracking-wide text-slate-100 uppercase">
-            Guía de Objetivos eJPTv2
+            Guía de Objetivos
           </h2>
         </div>
 
@@ -231,11 +231,11 @@ export const ScenarioGuide: React.FC<ScenarioGuideProps> = ({
             {currentStep.description}
           </p>
 
-          {/* Theoretical explanation: Why it's tested in eJPTv2 */}
+          {/* Theoretical explanation: why this matters in a real pentest */}
           <div className="bg-slate-950/70 border border-slate-800 rounded p-2.5 text-[11px] text-slate-400 space-y-1">
             <div className="text-slate-300 font-semibold flex items-center gap-1">
               <Award className="w-3 h-3 text-amber-400" />
-              Relevancia para la certificación eJPTv2:
+              Relevancia práctica:
             </div>
             <p className="leading-normal">{currentStep.whyInExam}</p>
           </div>
@@ -282,7 +282,7 @@ export const ScenarioGuide: React.FC<ScenarioGuideProps> = ({
         <div className="bg-emerald-950/50 border border-emerald-800 rounded-lg p-5 text-center space-y-3">
           <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />
           <h3 className="text-sm font-bold text-emerald-200">
-            ¡Escenario eJPTv2 Superado con Éxito!
+            ¡Escenario Superado con Éxito!
           </h3>
           <p className="text-xs text-emerald-300/80 leading-relaxed">
             {scenario.successFlagMessage}
@@ -299,7 +299,7 @@ export const ScenarioGuide: React.FC<ScenarioGuideProps> = ({
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-md text-xs font-semibold transition-colors shadow-sm"
               >
                 <Award className="w-3.5 h-3.5" />
-                Ver Informe Oficial eJPTv2
+                Ver Informe de Auditoría
               </button>
             )}
             <button

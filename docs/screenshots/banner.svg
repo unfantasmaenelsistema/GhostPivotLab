@@ -51,20 +51,20 @@
     <text x="12" y="16" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">UN FANTASMA EN EL SISTEMA</text>
   </g>
 
-  <!-- Badge eJPTv2 Certified -->
+  <!-- Badge Pivoting Lab -->
   <g transform="translate(405, 78)">
     <rect x="0" y="0" width="155" height="24" rx="12" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
-    <text x="12" y="16" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#34d399" letter-spacing="1.2">INE eJPTv2 READY</text>
+    <text x="12" y="16" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#34d399" letter-spacing="1.2">GHOSTOFFENSIVE LAB</text>
   </g>
 
   <!-- Main Title -->
   <text x="175" y="145" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
-    eJPTv2 Pivoting &amp; Port Forwarding Lab
+    Ghost Pivot Lab
   </text>
 
   <!-- Subtitle -->
   <text x="175" y="185" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="400" fill="#94a3b8">
-    Simulador táctico interactivo con terminal multi-pestaña, topología dinámica y telemetría en tiempo real
+    Simulador táctico de pivoting &amp; port forwarding con terminal multi-pestaña, topología dinámica y telemetría en tiempo real
   </text>
 
   <!-- Features Pills / Tags -->

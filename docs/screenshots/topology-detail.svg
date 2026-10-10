@@ -13,7 +13,7 @@
 
   <!-- Title -->
   <text x="32" y="38" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Arquitectura de Red y Métodos de Pivoting Simulados</text>
-  <text x="32" y="58" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">eJPTv2 Exam Scenarios • Routing • Tunneling • Port Redirection</text>
+  <text x="32" y="58" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">Pivoting Scenarios • Routing • Tunneling • Port Redirection</text>
 
   <!-- Section 1: Metasploit Autoroute + Portfwd -->
   <g transform="translate(32, 80)">
@@ -123,6 +123,6 @@
 
   <!-- Footer note -->
   <text x="32" y="480" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
-    Desarrollado para la preparación oficial del eJPTv2. Autor: <tspan font-weight="700" fill="#38bdf8">Un Fantasma En El Sistema</tspan> (https://www.unfantasmaenelsistema.com/)
+    Desarrollado para la práctica de pivoting y port forwarding. Autor: <tspan font-weight="700" fill="#38bdf8">Un Fantasma En El Sistema</tspan> (https://www.unfantasmaenelsistema.com/)
   </text>
 </svg>

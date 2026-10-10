@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="text-[10px] text-slate-500 group-hover:text-sky-400">↗</span>
             </span>
             <span className="text-sm font-bold tracking-tight text-slate-100">
-              eJPTv2 Pivoting Lab
+              Ghost Pivot Lab
             </span>
           </div>
         </a>
@@ -95,10 +95,10 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={onOpenAuditReport}
           className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-850 hover:bg-slate-800 border border-slate-750 text-emerald-300 hover:text-emerald-200 rounded-lg text-xs font-medium transition-colors whitespace-nowrap shrink-0"
-          title="Ver o generar informe de auditoría eJPTv2"
+          title="Ver o generar informe de auditoría"
         >
           <Award className="w-4 h-4" />
-          <span className="hidden md:inline">Informe eJPTv2</span>
+          <span className="hidden md:inline">Informe</span>
         </button>
 
         <button

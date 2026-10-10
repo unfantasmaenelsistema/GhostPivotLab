@@ -32,7 +32,7 @@ export const Scratchpad: React.FC<ScratchpadProps> = ({
   discoveredHosts,
   compromisedMachineIds,
 }) => {
-  const storageKey = `ejpt_notes_${scenario.id}`;
+  const storageKey = `ghost_pivot_notes_${scenario.id}`;
   const [notes, setNotes] = useState<string>(() => {
     return localStorage.getItem(storageKey) || '';
   });
@@ -53,7 +53,7 @@ export const Scratchpad: React.FC<ScratchpadProps> = ({
   const insertTemplate = () => {
     const template = 
 `========================================
-NOTAS DE AUDITORÍA eJPTv2 - ${scenario.title}
+NOTAS DE AUDITORÍA - ${scenario.title}
 Fecha: ${new Date().toLocaleDateString()}
 ========================================
 
@@ -94,7 +94,7 @@ Fecha: ${new Date().toLocaleDateString()}
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `notas_ejptv2_${scenario.id}.txt`;
+    link.download = `notas_ghost_pivot_lab_${scenario.id}.txt`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -112,7 +112,7 @@ Fecha: ${new Date().toLocaleDateString()}
         {
           type: 'Flag',
           target: 'SSH Tunnel 192.168.1.50:2222',
-          value: 'FLAG{eJPTv2_PORTPROXY_TUNNEL_SUCCESS_ZORIN_PWNED}',
+          value: 'FLAG{GHOST_PIVOT_PORTPROXY_TUNNEL_SUCCESS_ZORIN_PWNED}',
           obtained: compromisedMachineIds.includes('zorin-target'),
         },
       ];
@@ -148,7 +148,7 @@ Fecha: ${new Date().toLocaleDateString()}
         {
           type: 'Flag',
           target: 'MS17-010 Double Pivot',
-          value: 'FLAG{eJPTv2_ETERNALBLUE_DOUBLE_PIVOT_EXPLOIT_SUCCESS}',
+          value: 'FLAG{GHOST_PIVOT_ETERNALBLUE_DOUBLE_PIVOT_EXPLOIT_SUCCESS}',
           obtained: compromisedMachineIds.includes('win7-target'),
         },
       ];
@@ -168,7 +168,7 @@ Fecha: ${new Date().toLocaleDateString()}
             </div>
             <div>
               <h2 className="text-base font-semibold text-slate-100">
-                Pentest Scratchpad & Registro de Evidencias (eJPTv2)
+                Pentest Scratchpad & Registro de Evidencias
               </h2>
               <span className="text-[11px] text-slate-400 font-mono">
                 {scenario.title} · Guardado automático en el navegador
@@ -218,7 +218,7 @@ Fecha: ${new Date().toLocaleDateString()}
                 title="Insertar plantilla predefinida de auditoría"
               >
                 <PlusCircle className="w-3.5 h-3.5 text-amber-400" />
-                <span>Plantilla eJPTv2</span>
+                <span>Plantilla de Auditoría</span>
               </button>
               <button
                 onClick={handleCopy}
@@ -246,7 +246,7 @@ Fecha: ${new Date().toLocaleDateString()}
               <textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                placeholder="Apunta aquí tus comandos ejecutados, puertos abiertos, credenciales encontradas y notas para el examen eJPTv2..."
+                placeholder="Apunta aquí tus comandos ejecutados, puertos abiertos, credenciales encontradas y notas para tu examen práctico de pentesting..."
                 rows={16}
                 className="w-full flex-1 bg-slate-950 border border-slate-800 rounded-lg p-4 text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-amber-500 font-mono text-xs leading-relaxed resize-none scrollbar-thin scrollbar-thumb-slate-800"
               />

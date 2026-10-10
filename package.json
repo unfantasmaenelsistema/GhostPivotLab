@@ -1,7 +1,7 @@
 {
-  "name": "ejptv2-pivoting-lab",
+  "name": "ghost-pivot-lab",
   "version": "1.0.0",
-  "description": "Simulador interactivo de pivoting y port forwarding para el examen eJPTv2 (INE Security) con topología dinámica, terminal multitarea y event log en tiempo real.",
+  "description": "Simulador interactivo de pivoting y port forwarding (autoroute, portproxy, portfwd, SSH tunneling) con topología dinámica, terminal multitarea y event log en tiempo real.",
   "private": false,
   "type": "module",
   "scripts": {
