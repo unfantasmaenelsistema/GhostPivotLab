@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="accent-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.45" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16" />
+  <rect width="1200" height="420" fill="url(#grid)" rx="16" />
+
+  <!-- Ambient light blobs -->
+  <circle cx="200" cy="100" r="140" fill="#0284c7" opacity="0.12" filter="url(#glow)" />
+  <circle cx="980" cy="280" r="180" fill="#6366f1" opacity="0.12" filter="url(#glow)" />
+  <circle cx="600" cy="360" r="120" fill="#10b981" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Top Border Accent Line -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#cyan-glow)" />
+
+  <!-- Ghost Icon / Logo Branding Container -->
+  <g transform="translate(80, 70)">
+    <!-- Shield / Hexagon outer -->
+    <rect x="0" y="0" width="76" height="76" rx="18" fill="#0f172a" stroke="#0ea5e9" stroke-width="2" filter="url(#glow)" />
+    <!-- Ghost Icon -->
+    <path d="M 24 50 C 24 35 30 26 38 26 C 46 26 52 35 52 50 C 49 47 45 49 42 46 C 39 49 35 47 32 50 C 29 47 26 49 24 50 Z" fill="#06b6d4" />
+    <circle cx="33" cy="37" r="2.5" fill="#0f172a" />
+    <circle cx="43" cy="37" r="2.5" fill="#0f172a" />
+  </g>
+
+  <!-- Brand tag -->
+  <g transform="translate(175, 78)">
+    <rect x="0" y="0" width="220" height="24" rx="12" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-width="1" />
+    <text x="12" y="16" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">UN FANTASMA EN EL SISTEMA</text>
+  </g>
+
+  <!-- Badge eJPTv2 Certified -->
+  <g transform="translate(405, 78)">
+    <rect x="0" y="0" width="155" height="24" rx="12" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
+    <text x="12" y="16" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#34d399" letter-spacing="1.2">INE eJPTv2 READY</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="175" y="145" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+    eJPTv2 Pivoting &amp; Port Forwarding Lab
+  </text>
+
+  <!-- Subtitle -->
+  <text x="175" y="185" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="400" fill="#94a3b8">
+    Simulador táctico interactivo con terminal multi-pestaña, topología dinámica y telemetría en tiempo real
+  </text>
+
+  <!-- Features Pills / Tags -->
+  <g transform="translate(80, 225)">
+    <!-- Pill 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4" fill="#06b6d4" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Topología Interactiva</text>
+    </g>
+    <!-- Pill 2 -->
+    <g transform="translate(205, 0)">
+      <rect width="210" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4" fill="#10b981" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Autoroute &amp; SOCKS Proxy</text>
+    </g>
+    <!-- Pill 3 -->
+    <g transform="translate(430, 0)">
+      <rect width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4" fill="#f59e0b" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Chisel Reverse Tunnels</text>
+    </g>
+    <!-- Pill 4 -->
+    <g transform="translate(635, 0)">
+      <rect width="180" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4" fill="#a855f7" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">SSH &amp; Netsh Portproxy</text>
+    </g>
+    <!-- Pill 5 -->
+    <g transform="translate(830, 0)">
+      <rect width="205" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4" fill="#ec4899" />
+      <text x="32" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Event Log en Tiempo Real</text>
+    </g>
+  </g>
+
+  <!-- Mini Terminal Snippet Visual on Bottom Left -->
+  <g transform="translate(80, 280)">
+    <rect width="580" height="95" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1.2" />
+    <!-- Terminal Header dots -->
+    <circle cx="18" cy="18" r="4.5" fill="#ef4444" />
+    <circle cx="34" cy="18" r="4.5" fill="#eab308" />
+    <circle cx="50" cy="18" r="4.5" fill="#22c55e" />
+    <text x="70" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">meterpreter (session 1) ~ pivoting active</text>
+    <!-- Command Line 1 -->
+    <text x="18" y="52" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38bdf8">meterpreter &gt; <tspan fill="#f8fafc">portfwd add -l 8080 -p 80 -r 10.10.10.15</tspan></text>
+    <!-- Output -->
+    <text x="18" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4ade80">[+] Local TCP relay created: 0.0.0.0:8080 &lt;--&gt; 10.10.10.15:80</text>
+  </g>
+
+  <!-- Dynamic Network Mini Diagram Visual on Bottom Right -->
+  <g transform="translate(700, 280)">
+    <rect width="420" height="95" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1.2" />
+    <!-- Node 1: Kali -->
+    <rect x="25" y="22" width="90" height="50" rx="6" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5" />
+    <text x="40" y="42" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8">KALI-LINUX</text>
+    <text x="35" y="58" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">192.168.1.100</text>
+
+    <!-- Connector 1 -->
+    <line x1="115" y1="47" x2="165" y2="47" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="4 2" />
+
+    <!-- Node 2: Pivot Dual-NIC -->
+    <rect x="165" y="16" width="105" height="62" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+    <text x="180" y="36" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#34d399">PIVOT-SERVER</text>
+    <text x="175" y="52" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#cbd5e1">eth0: .1.50</text>
+    <text x="175" y="66" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#f59e0b">eth1: 10.10.10.5</text>
+
+    <!-- Connector 2 (Tunnel) -->
+    <line x1="270" y1="47" x2="315" y2="47" stroke="#10b981" stroke-width="2" stroke-dasharray="4 2" />
+
+    <!-- Node 3: Target -->
+    <rect x="315" y="22" width="85" height="50" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" />
+    <text x="328" y="42" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#f87171">TARGET-DB</text>
+    <text x="326" y="58" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">10.10.10.15</text>
+  </g>
+</svg>
