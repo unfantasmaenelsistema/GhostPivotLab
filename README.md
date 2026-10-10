@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://unfantasmaenelsistema.github.io/ejptv2-pivoting-lab/"><img src="https://img.shields.io/badge/Demo%20en%20Vivo-GitHub%20Pages-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Demo en Vivo"></a>
   <a href="https://www.unfantasmaenelsistema.com/"><img src="https://img.shields.io/badge/Comunidad-Un%20Fantasma%20En%20El%20Sistema-0284c7?style=for-the-badge&logo=firefox-browser&logoColor=white" alt="Un Fantasma En El Sistema"></a>
   <img src="https://img.shields.io/badge/Certificación-INE%20eJPTv2-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="eJPTv2 Certified">
   <img src="https://img.shields.io/badge/React-19.0-61dafb?style=for-the-badge&logo=react&logoColor=black" alt="React 19">
@@ -143,7 +144,7 @@ C:\> netsh interface portproxy show all
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/<tu-usuario>/ejptv2-pivoting-lab.git
+   git clone https://github.com/unfantasmaenelsistema/ejptv2-pivoting-lab.git
    cd ejptv2-pivoting-lab
    ```
 
