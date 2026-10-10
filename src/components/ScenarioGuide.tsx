@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ScenarioConfig, ScenarioStep, LearningMode } from '../types';
 import {
   CheckCircle2,
@@ -26,6 +26,7 @@ interface ScenarioGuideProps {
   currentStepIndex: number;
   completedStepIds: string[];
   learningMode: LearningMode;
+  secondsElapsed: number;
   onSetLearningMode: (mode: LearningMode) => void;
   onResetProgress: () => void;
   onOpenAuditReport?: () => void;
@@ -37,24 +38,13 @@ export const ScenarioGuide: React.FC<ScenarioGuideProps> = ({
   currentStepIndex,
   completedStepIds,
   learningMode,
+  secondsElapsed,
   onSetLearningMode,
   onResetProgress,
   onOpenAuditReport,
 }) => {
   const [showHint, setShowHint] = useState<boolean>(false);
   const [copiedCmd, setCopiedCmd] = useState<string | null>(null);
-  const [secondsElapsed, setSecondsElapsed] = useState<number>(0);
-  const [examFinished, setExamFinished] = useState<boolean>(false);
-
-  useEffect(() => {
-    let interval: any = null;
-    if (learningMode === 'exam' && !examFinished) {
-      interval = setInterval(() => {
-        setSecondsElapsed((prev) => prev + 1);
-      }, 1000);
-    }
-    return () => clearInterval(interval);
-  }, [learningMode, examFinished]);
 
   const currentStep = scenario.steps[currentStepIndex];
   const allCompleted = scenario.steps.every((s) => completedStepIds.includes(s.id));

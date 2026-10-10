@@ -420,6 +420,7 @@ export default function App() {
               currentStepIndex={effectiveStepIndex}
               completedStepIds={completedStepIds}
               learningMode={learningMode}
+              secondsElapsed={examSeconds}
               onSetLearningMode={setLearningMode}
               onResetProgress={handleResetProgress}
               onOpenAuditReport={() => setIsAuditReportOpen(true)}
